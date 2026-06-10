@@ -1,0 +1,61 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Carrinho fofo Maternarê</title>
+  <desc>Ícone SVG de carrinho de bebê em tons de rosa e laranja claro.</desc>
+
+  <defs>
+    <linearGradient id="bodyGradient" x1="118" y1="146" x2="388" y2="344" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF7F9B"/>
+      <stop offset="1" stop-color="#FFB36B"/>
+    </linearGradient>
+
+    <linearGradient id="softGradient" x1="98" y1="96" x2="416" y2="418" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE1EA"/>
+      <stop offset="1" stop-color="#FFE7CB"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="38" y="58" width="440" height="396" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#EF6F88" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="120" fill="#FFF8F4"/>
+
+  <circle cx="132" cy="126" r="42" fill="#FFE0EA" opacity="0.8"/>
+  <circle cx="394" cy="368" r="52" fill="#FFE4C8" opacity="0.75"/>
+  <circle cx="420" cy="126" r="18" fill="#FFB36B" opacity="0.32"/>
+  <circle cx="92" cy="374" r="20" fill="#FF7F9B" opacity="0.25"/>
+
+  <g filter="url(#softShadow)">
+    <path d="M126 250C126 170 181 112 257 112C329 112 384 167 386 241C386 250 379 257 370 257H143C134 257 126 259 126 250Z" fill="url(#softGradient)"/>
+
+    <path d="M257 112C181 112 126 170 126 250C126 259 134 257 143 257H258L257 112Z" fill="url(#bodyGradient)"/>
+
+    <path d="M154 257H390C404 257 414 271 410 284C391 340 339 381 277 381H232C175 381 126 344 108 291C102 274 116 257 134 257H154Z" fill="url(#bodyGradient)"/>
+
+    <path d="M154 257H390C404 257 414 271 410 284C408 290 406 296 403 302H118C114 302 111 300 108 298C107 296 107 294 106 291C100 274 116 257 134 257H154Z" fill="#FFD4DD" opacity="0.45"/>
+
+    <path d="M258 112V257" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round"/>
+
+    <path d="M128 250C128 170 182 112 257 112C313 112 360 145 379 194" stroke="#4E2532" stroke-width="15" stroke-linecap="round"/>
+    <path d="M142 257H390" stroke="#4E2532" stroke-width="15" stroke-linecap="round"/>
+    <path d="M112 291C131 344 178 381 232 381H277C333 381 382 348 405 299" stroke="#4E2532" stroke-width="15" stroke-linecap="round"/>
+
+    <path d="M378 160H424C442 160 456 174 456 192V199" stroke="#4E2532" stroke-width="15" stroke-linecap="round"/>
+    <path d="M322 381L359 424" stroke="#4E2532" stroke-width="15" stroke-linecap="round"/>
+    <path d="M190 381L153 424" stroke="#4E2532" stroke-width="15" stroke-linecap="round"/>
+    <path d="M142 424H372" stroke="#4E2532" stroke-width="15" stroke-linecap="round"/>
+
+    <circle cx="151" cy="424" r="31" fill="#FFF8F4" stroke="#4E2532" stroke-width="15"/>
+    <circle cx="361" cy="424" r="31" fill="#FFF8F4" stroke="#4E2532" stroke-width="15"/>
+
+    <circle cx="151" cy="424" r="11" fill="#FF7F9B"/>
+    <circle cx="361" cy="424" r="11" fill="#FFB36B"/>
+
+    <path d="M230 207C224 197 210 200 210 214C210 229 232 240 245 247C258 240 280 229 280 214C280 200 266 197 260 207C254 197 236 197 230 207Z" fill="#FFFFFF"/>
+  </g>
+
+  <path d="M90 122C88 114 78 114 76 122C74 130 66 133 59 129C52 125 45 132 49 139C53 146 50 154 42 156C34 158 34 168 42 170C50 172 53 180 49 187C45 194 52 201 59 197C66 193 74 196 76 204C78 212 88 212 90 204C92 196 100 193 107 197C114 201 121 194 117 187C113 180 116 172 124 170C132 168 132 158 124 156C116 154 113 146 117 139C121 132 114 125 107 129C100 133 92 130 90 122Z" fill="#FFB36B" opacity="0.82"/>
+  <circle cx="83" cy="163" r="12" fill="#FFFFFF"/>
+
+  <path d="M427 292C423 285 413 285 409 292L405 299L398 303C391 307 391 317 398 321L405 325L409 332C413 339 423 339 427 332L431 325L438 321C445 317 445 307 438 303L431 299L427 292Z" fill="#FF7F9B" opacity="0.65"/>
+</svg>

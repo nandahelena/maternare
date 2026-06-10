@@ -1,0 +1,31 @@
+{
+  "name": "maternare-mvp-estrutura",
+  "version": "1.0.0",
+  "description": "Estrutura inicial full stack da plataforma Maternarê com frontend HTML/CSS/JS e backend MVC em Node/Express.",
+  "main": "src/backend/server.js",
+  "scripts": {
+    "start": "node src/backend/server.js",
+    "dev": "nodemon src/backend/server.js",
+    "frontend": "npx serve src/frontend",
+    "lint": "echo \"Configure ESLint quando iniciar a implementação funcional.\""
+  },
+  "keywords": [
+    "maternare",
+    "mvc",
+    "node",
+    "express",
+    "frontend"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

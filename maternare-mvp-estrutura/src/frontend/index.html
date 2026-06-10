@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maternarê | Plataforma de acolhimento</title>
+  <meta name="description" content="Protótipo frontend da plataforma Maternarê para gestantes, ligas acadêmicas e equipe cliente." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=DM+Serif+Display:ital@0;1&family=Nunito:wght@300;400;600;700;800;900&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="ambient ambient-three" aria-hidden="true"></div>
+
+  <header class="topbar" aria-label="Navegação principal">
+    <a class="brand" href="#inicio" data-go="landing">
+      <img src="assets/logo-maternare.svg" alt="Logo provisória da Maternarê" />
+      <span>
+        <strong>Maternarê</strong>
+        <small>cuidado centralizado</small>
+      </span>
+    </a>
+
+    <nav class="top-nav" aria-label="Links da página inicial">
+      <a href="#beneficios">Benefícios</a>
+      <a href="#ligas">Ligas</a>
+      <a href="#fluxo">Como funciona</a>
+    </nav>
+
+    <div class="top-actions">
+      <button class="ghost-btn" type="button" data-scroll-login>
+        <span class="material-symbols-rounded" aria-hidden="true">login</span>
+        Entrar
+      </button>
+      <button class="primary-btn" type="button" data-start-login>
+        Começar agora
+        <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+      </button>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" data-menu-toggle>
+      <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+    </button>
+  </header>
+
+  <main id="conteudo">
+    <section class="landing view active" id="inicio" data-view="landing">
+      <div class="hero section-pad">
+        <span class="home-decor decor-heart material-symbols-rounded" aria-hidden="true">favorite</span>
+        <span class="home-decor decor-flower material-symbols-rounded" aria-hidden="true">local_florist</span>
+        <span class="home-decor decor-stars material-symbols-rounded" aria-hidden="true">auto_awesome</span>
+        <span class="home-decor decor-crib material-symbols-rounded" aria-hidden="true">crib</span>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="kicker"><span class="kicker-line"></span><span class="kicker-text">Plataforma web para acolhimento materno</span></p>
+            <h1>Cuidado, comunicação e acompanhamento em um só lugar.</h1>
+            <p class="hero-text">
+              A Maternarê organiza o contato entre gestantes, ligas acadêmicas e equipe do projeto com uma experiência simples, doce e segura para o dia a dia.
+            </p>
+
+            <div class="hero-actions">
+              <button class="primary-btn big" type="button" data-start-login>
+                Acessar plataforma
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+              </button>
+              <a class="secondary-btn big" href="#beneficios">
+                Ver benefícios
+                <span class="material-symbols-rounded" aria-hidden="true">expand_more</span>
+              </a>
+            </div>
+
+            <div class="mini-metrics" aria-label="Resumo do MVP">
+              <article>
+                <strong>6</strong>
+                <span>ligas conectadas</span>
+              </article>
+              <article>
+                <strong>1</strong>
+                <span>histórico central</span>
+              </article>
+              <article>
+                <strong>100%</strong>
+                <span>foco em usabilidade</span>
+              </article>
+            </div>
+          </div>
+
+          <aside class="hero-visual reveal" aria-label="Ilustração da plataforma">
+            <div class="phone-card floating-card">
+              <div class="phone-header">
+                <span class="avatar-bubble"><span class="material-symbols-rounded">pregnant_woman</span></span>
+                <div>
+                  <strong>Olá, Mariana</strong>
+                  <small>Semana 24 de acompanhamento</small>
+                </div>
+              </div>
+              <div class="progress-ring" aria-hidden="true">
+                <span>74%</span>
+              </div>
+              <div class="mini-chat">
+                <p>Oi! A liga respondeu sua dúvida 💗</p>
+                <button type="button">Abrir chat</button>
+              </div>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+
+      <section class="section-pad benefits" id="beneficios">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="kicker"><span class="kicker-line"></span><span class="kicker-text">Benefícios principais</span></p>
+            <h2>Uma plataforma leve para reduzir ruído e aumentar cuidado.</h2>
+            <p>O fluxo foi pensado para centralizar cadastros, mensagens, páginas das ligas e acompanhamento das gestantes sem deixar a interface pesada.</p>
+          </div>
+
+          <div class="benefit-grid">
+            <article class="benefit-card reveal hover-lift">
+              <span class="material-symbols-rounded" aria-hidden="true">pregnant_woman</span>
+              <h3>Cadastro de gestantes</h3>
+              <p>Perfil simples com contato, idade gestacional, observações e dados importantes de acompanhamento.</p>
+            </article>
+            <article class="benefit-card reveal hover-lift">
+              <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+              <h3>Chat interno</h3>
+              <p>Conversas concentradas em um único espaço para diminuir perda de informação entre canais externos.</p>
+            </article>
+            <article class="benefit-card reveal hover-lift">
+              <span class="material-symbols-rounded" aria-hidden="true">groups</span>
+              <h3>Páginas das ligas</h3>
+              <p>Portfólios institucionais com descrição, área de atuação e formas de contato de cada liga acadêmica.</p>
+            </article>
+            <article class="benefit-card reveal hover-lift">
+              <span class="material-symbols-rounded" aria-hidden="true">history</span>
+              <h3>Histórico centralizado</h3>
+              <p>Registro básico de interações para facilitar rastreabilidade e continuidade do atendimento.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad ligas-section" id="ligas">
+        <div class="container split-grid">
+          <div class="section-heading left reveal">
+            <p class="kicker"><span class="kicker-line"></span><span class="kicker-text">Ligas acadêmicas</span></p>
+            <h2>Portfólio claro para a gestante escolher o melhor contato.</h2>
+            <p>As ligas aparecem de forma amigável, com cards coloridos, área de atuação e botão para iniciar conversa.</p>
+          </div>
+
+          <div class="liga-cards reveal">
+            <article class="liga-card hover-tilt">
+              <span class="material-symbols-rounded">medical_services</span>
+              <h3>Liga Materno-Infantil</h3>
+              <p>Acolhimento, dúvidas frequentes e orientação inicial.</p>
+            </article>
+            <article class="liga-card hover-tilt">
+              <span class="material-symbols-rounded">nutrition</span>
+              <h3>Liga de Nutrição</h3>
+              <p>Cuidados alimentares, rotina e bem-estar.</p>
+            </article>
+            <article class="liga-card hover-tilt">
+              <span class="material-symbols-rounded">psychology</span>
+              <h3>Liga de Psicologia</h3>
+              <p>Escuta, saúde emocional e apoio durante a gestação.</p>
+            </article>
+            <article class="liga-card hover-tilt">
+              <span class="material-symbols-rounded">monitor_heart</span>
+              <h3>Liga de Enfermagem Obstétrica</h3>
+              <p>Rotina de cuidados, sinais de atenção e apoio no pré-natal.</p>
+            </article>
+            <article class="liga-card hover-tilt">
+              <span class="material-symbols-rounded">self_improvement</span>
+              <h3>Liga de Fisioterapia</h3>
+              <p>Postura, alongamentos e orientações para mais conforto corporal.</p>
+            </article>
+            <article class="liga-card hover-tilt">
+              <span class="material-symbols-rounded">child_care</span>
+              <h3>Liga de Pediatria e Neonatologia</h3>
+              <p>Preparação para a chegada do bebê e cuidados iniciais.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad flow" id="fluxo">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="kicker"><span class="kicker-line"></span><span class="kicker-text">Fluxo principal</span></p>
+            <h2>Do primeiro acesso à conversa com a liga.</h2>
+          </div>
+
+          <div class="flow-line" aria-label="Fluxo de uso da plataforma">
+            <article class="flow-step reveal">
+              <span>01</span>
+              <h3>Cadastro ou login</h3>
+              <p>Usuária escolhe o tipo de acesso e entra no painel correto.</p>
+            </article>
+            <article class="flow-step reveal">
+              <span>02</span>
+              <h3>Perfil e ligas</h3>
+              <p>Consulta seus dados e encontra páginas das ligas acadêmicas.</p>
+            </article>
+            <article class="flow-step reveal">
+              <span>03</span>
+              <h3>Mensagem interna</h3>
+              <p>Inicia conversa com a liga e mantém o histórico no sistema.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="login-view view" id="login" data-view="login" aria-labelledby="login-title">
+      <div class="container login-grid section-pad">
+        <div class="login-intro reveal">
+          <button class="back-link" type="button" data-go="landing">
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_back</span>
+            Voltar ao início
+          </button>
+          <p class="kicker"><span class="kicker-line"></span><span class="kicker-text">Acesso à plataforma</span></p>
+          <h2 id="login-title">Escolha seu perfil para entrar no ambiente certo.</h2>
+          <p>
+            O login é demonstrativo nesta versão de frontend. Use os botões abaixo para visualizar três experiências: paciente/gestante, liga acadêmica e cliente/equipe.
+          </p>
+          <div class="login-benefits">
+            <span><i class="material-symbols-rounded">verified_user</i> login básico</span>
+            <span><i class="material-symbols-rounded">favorite</i> interface acolhedora</span>
+            <span><i class="material-symbols-rounded">devices</i> responsivo</span>
+          </div>
+        </div>
+
+        <form class="login-card reveal" data-login-form>
+          <div class="role-switch" role="tablist" aria-label="Selecionar tipo de usuário">
+            <button class="role-option active" type="button" data-role="paciente" aria-selected="true">
+              <span class="material-symbols-rounded">pregnant_woman</span>
+              Paciente
+            </button>
+            <button class="role-option" type="button" data-role="liga" aria-selected="false">
+              <span class="material-symbols-rounded">volunteer_activism</span>
+              Liga
+            </button>
+            <button class="role-option" type="button" data-role="cliente" aria-selected="false">
+              <span class="material-symbols-rounded">admin_panel_settings</span>
+              Cliente
+            </button>
+          </div>
+
+          <div class="liga-access-fields" data-liga-fields hidden>
+            <label>
+              <span>Liga de acesso</span>
+              <select name="liga">
+                <option value="Liga Materno-Infantil">Liga Materno-Infantil</option>
+                <option value="Liga de Nutrição">Liga de Nutrição</option>
+                <option value="Liga de Psicologia">Liga de Psicologia</option>
+                <option value="Liga de Enfermagem Obstétrica">Liga de Enfermagem Obstétrica</option>
+                <option value="Liga de Fisioterapia">Liga de Fisioterapia</option>
+                <option value="Liga de Pediatria e Neonatologia">Liga de Pediatria e Neonatologia</option>
+              </select>
+            </label>
+            <label>
+              <span>Quem está conduzindo?</span>
+              <input type="text" name="responsavel" placeholder="Ex: Ana Clara" value="Ana Clara" />
+            </label>
+          </div>
+
+          <label>
+            <span data-name-label>Nome</span>
+            <input type="text" name="nome" placeholder="Digite seu nome" value="Mariana" />
+          </label>
+          <label>
+            <span>E-mail</span>
+            <input type="email" name="email" placeholder="nome@email.com" value="mariana@maternare.com" />
+          </label>
+          <label>
+            <span>Senha</span>
+            <input type="password" name="senha" placeholder="••••••••" value="123456" />
+          </label>
+
+          <button class="primary-btn full" type="submit">
+            Entrar no painel
+            <span class="material-symbols-rounded" aria-hidden="true">auto_awesome</span>
+          </button>
+          <p class="form-note">Protótipo visual: não há autenticação real neste frontend.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="app-shell view" data-view="app" aria-label="Painel da plataforma Maternarê">
+      <aside class="sidebar" data-sidebar>
+        <button class="sidebar-toggle" type="button" aria-label="Expandir ou recolher sidebar" data-sidebar-toggle>
+          <span class="material-symbols-rounded">menu_open</span>
+        </button>
+
+        <div class="side-brand">
+          <img src="assets/logo-maternare.svg" alt="Logo Maternarê" />
+          <span>
+            <strong>Maternarê</strong>
+            <small data-role-label>Paciente</small>
+          </span>
+        </div>
+
+        <nav class="side-nav" aria-label="Navegação do painel" data-side-nav></nav>
+
+        <button class="side-logout" type="button" data-go="landing">
+          <span class="material-symbols-rounded">logout</span>
+          <span>Sair</span>
+        </button>
+      </aside>
+
+      <div class="dashboard">
+        <header class="dashboard-header">
+          <div>
+            <p class="kicker"><span class="kicker-line"></span><span class="kicker-text" data-panel-kicker>Painel da paciente</span></p>
+            <h2 data-panel-title>Bem-vinda à sua jornada</h2>
+          </div>
+          <div class="dashboard-actions">
+            <button class="icon-btn" type="button" aria-label="Notificações">
+              <span class="material-symbols-rounded">notifications</span>
+              <i></i>
+            </button>
+            <button class="profile-pill" type="button">
+              <span class="material-symbols-rounded">face</span>
+              <strong data-user-name>Mariana</strong>
+            </button>
+          </div>
+        </header>
+
+        <div class="dashboard-content" data-dashboard-content></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
