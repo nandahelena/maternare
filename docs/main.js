@@ -478,6 +478,9 @@ function renderChat() {
 
       <article class="chat-card chat-window">
         <div class="chat-head">
+          <button class="chat-back-btn" type="button" data-chat-back aria-label="Voltar à lista de ligas">
+            <span class="material-symbols-rounded">arrow_back</span>Voltar
+          </button>
           <span class="avatar-bubble"><span class="material-symbols-rounded">local_florist</span></span>
           <div><strong>${state.chatTarget}</strong><small>Canal interno da Maternarê</small></div>
         </div>
@@ -601,6 +604,9 @@ function renderLigaConversas() {
 
       <article class="chat-card chat-window">
         <div class="chat-head">
+          <button class="chat-back-btn" type="button" data-chat-back aria-label="Voltar à lista de clientes">
+            <span class="material-symbols-rounded">arrow_back</span>Voltar
+          </button>
           <span class="avatar-bubble"><span class="material-symbols-rounded">volunteer_activism</span></span>
           <div><strong>${active.nome}</strong><small>${active.status} • conduzida por ${active.conduzidaPor}</small></div>
         </div>
@@ -838,6 +844,12 @@ function bindDynamicActions() {
     button.addEventListener('click', () => {
       state.chatTarget = button.dataset.openChat;
       setActiveTab('chat');
+      if (window.innerWidth <= 600) {
+        requestAnimationFrame(() => {
+          const layout = document.querySelector('.chat-layout');
+          if (layout) layout.classList.add('chat-open');
+        });
+      }
     });
   });
 
@@ -845,6 +857,12 @@ function bindDynamicActions() {
     button.addEventListener('click', () => {
       state.chatTarget = button.dataset.chatTarget;
       renderTab();
+      if (window.innerWidth <= 600) {
+        requestAnimationFrame(() => {
+          const layout = document.querySelector('.chat-layout');
+          if (layout) layout.classList.add('chat-open');
+        });
+      }
     });
   });
 
@@ -852,6 +870,12 @@ function bindDynamicActions() {
     button.addEventListener('click', () => {
       state.clientTarget = button.dataset.openClientChat;
       setActiveTab('conversasLiga');
+      if (window.innerWidth <= 600) {
+        requestAnimationFrame(() => {
+          const layout = document.querySelector('.chat-layout');
+          if (layout) layout.classList.add('chat-open');
+        });
+      }
     });
   });
 
@@ -859,6 +883,19 @@ function bindDynamicActions() {
     button.addEventListener('click', () => {
       state.clientTarget = button.dataset.clientTarget;
       renderTab();
+      if (window.innerWidth <= 600) {
+        requestAnimationFrame(() => {
+          const layout = document.querySelector('.chat-layout');
+          if (layout) layout.classList.add('chat-open');
+        });
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-chat-back]').forEach(button => {
+    button.addEventListener('click', () => {
+      const layout = button.closest('.chat-layout');
+      if (layout) layout.classList.remove('chat-open');
     });
   });
 
@@ -1004,6 +1041,11 @@ function initMobileSidebarButton() {
   button.innerHTML = '<span class="material-symbols-rounded">menu</span>';
   button.addEventListener('click', () => appShell.classList.toggle('sidebar-open'));
   appShell.appendChild(button);
+
+  const overlay = document.createElement('div');
+  overlay.className = 'sidebar-overlay';
+  overlay.addEventListener('click', () => appShell.classList.remove('sidebar-open'));
+  appShell.appendChild(overlay);
 }
 
 function updateLoginFields() {
@@ -1093,6 +1135,12 @@ function bindStaticActions() {
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
       appShell.classList.remove('sidebar-open');
+      topbar.classList.remove('menu-open');
+    }
+  });
+
+  document.addEventListener('click', event => {
+    if (topbar.classList.contains('menu-open') && !topbar.contains(event.target)) {
       topbar.classList.remove('menu-open');
     }
   });

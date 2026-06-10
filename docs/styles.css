@@ -2448,3 +2448,165 @@ body.modal-open {
 .message-row small {
   line-height: 1.45;
 }
+
+/* ── Responsividade mobile — melhorias ─────────────────────── */
+
+/* Overlay da sidebar no mobile */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 98;
+  background: rgba(75, 39, 48, 0.38);
+  backdrop-filter: blur(3px);
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+  .app-shell.sidebar-open .sidebar-overlay {
+    display: block;
+  }
+}
+
+/* Botão "voltar" do chat — visível só no mobile */
+.chat-back-btn {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 0;
+  color: var(--primary-dark);
+  font-weight: 900;
+  font-family: inherit;
+  font-size: 0.92rem;
+  cursor: pointer;
+  padding: 6px 0;
+  margin-right: 8px;
+}
+
+/* Chat mobile: mostra lista OU janela, nunca os dois */
+@media (max-width: 600px) {
+  .chat-back-btn {
+    display: inline-flex;
+  }
+
+  .chat-layout > aside {
+    display: block;
+  }
+
+  .chat-layout > article.chat-window {
+    display: none;
+  }
+
+  .chat-layout.chat-open > aside {
+    display: none;
+  }
+
+  .chat-layout.chat-open > article.chat-window {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chat-window {
+    min-height: auto;
+  }
+
+  .chat-messages {
+    max-height: 42vh;
+  }
+}
+
+/* Telas muito pequenas (≤380px) */
+@media (max-width: 380px) {
+  .hero-visual::before {
+    width: 270px;
+    height: 270px;
+  }
+
+  .hero-visual::after {
+    width: 200px;
+    height: 200px;
+  }
+
+  .phone-card {
+    padding: 16px;
+  }
+
+  .progress-ring {
+    width: 140px;
+    height: 140px;
+  }
+
+  .progress-ring span {
+    width: 92px;
+    height: 92px;
+    font-size: 2.4rem;
+  }
+
+  .section-pad {
+    padding: 56px 0;
+  }
+
+  h1 {
+    font-size: clamp(2.6rem, 13vw, 3.6rem);
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 11vw, 3rem);
+  }
+}
+
+/* Ajustes para ≤460px */
+@media (max-width: 460px) {
+  .dashboard {
+    padding: 16px 12px 56px;
+  }
+
+  .panel-card .number {
+    font-size: 2.8rem;
+  }
+
+  .hero {
+    padding-bottom: 24px;
+  }
+
+  .login-card {
+    padding: 16px;
+  }
+
+  .flow-step {
+    padding: 20px;
+  }
+
+  .blog-card img,
+  .blog-preview-card img {
+    height: 148px;
+  }
+}
+
+/* Ajuste de layout para tablet (768px–1080px) */
+@media (min-width: 761px) and (max-width: 1080px) {
+  .panel-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .content-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .login-grid {
+    align-items: start;
+    padding-top: 110px;
+  }
+}
+
+/* Toast no mobile fica acima do botão flutuante */
+@media (max-width: 1080px) {
+  .toast {
+    bottom: 84px;
+    right: 16px;
+    left: 16px;
+    right: 16px;
+    max-width: calc(100vw - 32px);
+  }
+}
