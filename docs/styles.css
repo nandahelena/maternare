@@ -443,20 +443,21 @@ h2 {
   font-weight: 400;
   line-height: 0.95;
   color: #3f1f28;
+  overflow-wrap: break-word;
 }
 
 h1 {
-  max-width: 740px;
+  max-width: min(740px, 100%);
   margin-bottom: 22px;
-  font-size: clamp(4.1rem, 9vw, 8.7rem);
-  letter-spacing: -0.06em;
+  font-size: clamp(2.6rem, 4.5vw, 5rem);
+  letter-spacing: -0.03em;
 }
 
 h2 {
   max-width: 760px;
   margin-bottom: 18px;
-  font-size: clamp(2.8rem, 5.8vw, 5.9rem);
-  letter-spacing: -0.045em;
+  font-size: clamp(2rem, 3.2vw, 3.6rem);
+  letter-spacing: -0.03em;
 }
 
 h3 {
@@ -700,6 +701,7 @@ h3 {
 .section-heading.left {
   text-align: left;
   margin: 0;
+  min-width: 0;
 }
 
 .benefits {
@@ -1748,9 +1750,9 @@ h3 {
 }
 
 h1 {
-  max-width: 680px;
-  font-size: clamp(3.6rem, 7.4vw, 7.7rem);
-  line-height: 1.01;
+  max-width: min(680px, 100%);
+  font-size: clamp(2.6rem, 4.5vw, 5rem);
+  line-height: 1.08;
 }
 
 .home-decor {
@@ -2264,6 +2266,7 @@ h1,
 
 .hero-copy {
   z-index: 3;
+  min-width: 0;
 }
 
 .hero-visual {
