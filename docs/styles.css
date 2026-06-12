@@ -208,9 +208,9 @@ button {
   transform: translateX(-50%);
   z-index: 90;
   width: min(100% - 34px, var(--container));
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 18px;
   padding: 12px 14px;
   border: 1px solid rgba(255,255,255,0.72);
@@ -220,6 +220,11 @@ button {
   border-radius: 999px;
   transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
 }
+
+.brand { justify-self: start; }
+.top-nav { justify-self: center; }
+.top-actions { justify-self: end; }
+.menu-toggle { grid-column: 3; justify-self: end; }
 
 .topbar:hover {
   transform: translateX(-50%) translateY(-2px);
@@ -1524,14 +1529,15 @@ h3 {
   }
 
   .topbar.menu-open {
-    align-items: stretch;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr auto;
+    align-items: center;
     border-radius: 28px;
   }
 
   .topbar.menu-open .top-nav,
   .topbar.menu-open .top-actions {
     display: flex;
+    grid-column: 1 / -1;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
